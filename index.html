@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+
+    <!-- link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-[#101010] w-screen min-h-screen grid place-content-center">
+    <div class="w-screen h-screen fixed top-0 left-0 place-content-center bg-black bg-opacity-60 hidden" id="loader">
+        <img src="./img/spinner.svg" class="w-52">
+    </div>
+    <div class="w-[58rem] p-2 rounded-lg bg-[#202020] flex space-x-4 px-10">
+        <div class="w-[50%] h-full grid place-content-center">
+            <img src="./img/img1.svg" class="w-52">
+        </div>
+        <div class="w-[50%] h-full py-16 px-5 space-y-10">
+            <span class="text-neutral-200 text-xl">Contact us</span>
+            <form action="https://formspree.io/f/xaygqqvl" method="POST" class="w-full space-y-7 flex flex-col" id="contact-form">
+                <!-- name -->
+                <div class="flex bg-white">
+                    <div class="p-2 grid place-content-center px-4">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <input type="text" name="full-name" id="full-name" class="w-full p-3 active:outline-none focus:outline-none" placeholder="Name">
+                </div>
+                <!-- email -->
+                <div class="flex bg-white">
+                    <div class="p-2 grid place-content-center px-4">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <input type="text" name="email" id="email" class="w-full p-3 active:outline-none focus:outline-none" placeholder="Email">
+                </div>
+                <!-- subject -->
+                <div class="flex bg-white">
+                    <div class="p-2 grid place-content-center px-4">
+                        <i class="fa-solid fa-file"></i>
+                    </div>
+                    <input type="text" name="subject" id="subject" class="w-full p-3 active:outline-none focus:outline-none" placeholder="Subject">
+                </div>
+                <!-- text area -->
+                <textarea rows="7" name="message" id="message" placeholder="Message" class="p-2 active:outline-none focus:outline-none"></textarea>
+                <!-- button -->
+                <button class="w-full bg-gradient-to-r from-purple-800 to-pink-700 py-2 flex justify-center items-center space-x-1 text-white hover:shadow-md hover:shadow-purple-700 duration-200">
+                    <span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </span>
+                    <span>
+                        Send
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
